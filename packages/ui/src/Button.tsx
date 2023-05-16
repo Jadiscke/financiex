@@ -1,16 +1,20 @@
 import * as React from "react";
 
-export const Button = () => {
+type ButtonProps = {
+  children: React.ReactNode;
+  onClick?: () => void;
+}
+
+export const Button = ({children, onClick = () => {}} : ButtonProps) => {
   return (
-    <div className="rounded-md ">
-      <a href="https://turbo.build/repo/docs">
-        <div className="ui-flex ui-w-full ui-items-center ui-justify-center ui-rounded-md ui-border ui-border-transparent ui-px-8 ui-py-3 ui-text-base ui-font-medium ui-no-underline ui-bg-white ui-text-black hover:ui-bg-gray-300 md:ui-py-3 md:ui-px-10 md:ui-text-lg md:ui-leading-6">
-          Read the docs
-          <span className="ui-ml-2 ui-bg-gradient-to-r ui-from-brandred ui-to-brandblue ui-bg-clip-text ui-text-transparent">
-            →
-          </span>
-        </div>
-      </a>
-    </div>
+    <button
+      className="ui-flex-none ui-w-fit ui-bg-emerald-500 ui-hover:bg-emerald-900 ui-border ui-border-emerald-400 ui-duration-300 ui-rounded-lg ui-flex ui-items-center ui-justify-center ui-px-4 ui-py-2 ui-self-center"
+      onClick={onClick}
+    >
+    <span className="text-white">
+      {children}
+    </span>
+
+  </button>
   );
 };

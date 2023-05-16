@@ -1,27 +1,23 @@
 import * as React from "react";
 
+type CardProps = {
+  children: React.ReactNode;
+  title: string;
+  className?: React.HTMLAttributes<HTMLDivElement>["className"];
+}
+
 export const Card = ({
   title,
-  cta,
-  href,
-}: {
-  title: string;
-  cta: string;
-  href: string;
-}) => {
+  children,
+  className
+}:CardProps) => {
   return (
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      href={href}
-      className="ui-group ui-mt-4 ui-rounded-lg ui-border ui-border-transparent ui-overflow-hidden ui-bg-origin-border ui-bg-gradient-to-r ui-from-brandred ui-to-brandblue ui-text-[#6b7280]"
-    >
-      <div className="ui-p-4 ui-bg-zinc-900 ui-h-full">
-        <p className="ui-inline-block ui-text-xl ui-text-white">{title}</p>
-        <div className="ui-text-xs ui-mt-4 group-hover:ui-underline">
-          {cta} →
-        </div>
+    <div className={ `ui-flex ui-flex-col ui-p-8 ui-gap-4 ui-bg-gray-100 ui-rounded-md ${className ? className : ''}`}>
+      <h3 className="ui-text-xl ui-text-emerald-950 ui-self-start">{title}</h3>
+
+      <div className="ui-flex ui-items-center ui-justify-center ui-self-center">
+        {children}
       </div>
-    </a>
+    </div>
   );
 };
