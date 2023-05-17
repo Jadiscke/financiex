@@ -1,0 +1,12 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "zod": "^3.20.2"
+  },
+  "devDependencies": {
+    "tsconfig": "*",
+    "ts-node": "^10.9.1"
+  }
+}
