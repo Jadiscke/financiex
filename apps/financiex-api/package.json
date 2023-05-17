@@ -3,18 +3,19 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules src/server.ts",
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules src/index.ts",
     "build": "tsc",
     "start": "node dist/server.js"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
     "@types/node": "^18.11.17",
+    "api": "*",
     "eslint-config-custom": "*",
     "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
     "tsconfig": "*",
-    "typescript": "^4.9.4",
-    "api": "*"
+    "typescript": "^4.9.4"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
