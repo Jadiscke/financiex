@@ -1,10 +1,9 @@
-# Turborepo Tailwind CSS starter
+# Financiex
 
-This is an official starter Turborepo.
+Financiex is a personal open-source project with the objective to study
+tailwindcss, node.js child-process, SQL, typescript, Next.js and React
 
-## Using this example
-
-Run the following command:
+Financiex is created with tailwindcss-starter from Turborepo with
 
 ```sh
 npx create-turbo@latest -e with-tailwind

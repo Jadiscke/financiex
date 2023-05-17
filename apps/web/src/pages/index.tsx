@@ -2,15 +2,14 @@ import { Button } from "ui";
 
 export default function Page() {
   return (
-    <div className="flex flex-col justify-center items-center w-full h-full">
-      <div className="flex flex-col align-middle justify-center py-2 px-12 bg-emerald-500 m-0 rounded-lg bg-opacity-70">
+    <div className="flex h-full w-full flex-col items-center justify-center">
+      <div className="m-0 flex flex-col justify-center rounded-lg bg-emerald-500 bg-opacity-70 px-12 py-2 align-middle">
         <h1 className="text-3xl font-bold text-gray-100">Financiex</h1>
       </div>
-      <div className="flex align-middle justify-center gap-4 w-96 p-5 m-0 rounded-lg">
+      <div className="m-0 flex w-96 justify-center gap-4 rounded-lg p-5 align-middle">
         <Button>Login</Button>
         <Button>Sign Up</Button>
       </div>
-
     </div>
-  )
+  );
 }
