@@ -1,12 +1,9 @@
-import express from 'express';
+import { createServer } from "./server";
+import { log } from "logger/src";
 
-const app = express();
-const port = 3000;
+const port = process.env.PORT || 3001;
+const server = createServer();
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-})
-
-app.listen(port, () => {
-  console.log('Listening on port ' + port);
-})
+server.listen(port, () => {
+  log(`api running on ${port}`);
+});
