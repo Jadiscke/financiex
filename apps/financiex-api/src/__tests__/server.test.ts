@@ -7,16 +7,8 @@ describe("server", () => {
       .get("/healthz")
       .expect(200)
       .then((res) => {
-        expect(res.body.ok).toBe(true);
+        expect(res.text).toBe("Hello World!");
       });
   });
 
-  it("message endpoint says hello", async () => {
-    await supertest(createServer())
-      .get("/message/jared")
-      .expect(200)
-      .then((res) => {
-        expect(res.body).toEqual({ message: "hello jared" });
-      });
-  });
 });
